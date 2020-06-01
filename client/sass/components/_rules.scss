@@ -1,0 +1,43 @@
+
+// rules box design
+.rules{
+    height: 100vh;
+    background-color: rgba($color-dark, 0.9);
+    width: 100%;
+    position: absolute;
+    top: 0;
+    padding: 10rem 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
+
+&__box{
+    width: 35%;
+    background-color: $color-white;
+    margin: auto;
+    padding: 3rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    opacity: 0;
+    transform: scale(.25);
+    transition: all .5s .2s;
+}
+
+&__image{
+@include imageRes;
+&--box{
+    width: 80%;
+    margin: auto;
+}
+}
+&:target {
+        opacity: 1;
+        visibility: visible;
+    }
+&:target &__box {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+
+}

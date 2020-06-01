@@ -1,0 +1,42 @@
+body{
+    font-family: 'Roboto Slab', serif;
+}
+.primary__heading{
+    text-align: center;
+    font-size: 4rem;
+    color: $color-white;
+    margin-bottom: 2rem;
+    &--2{
+        display: block;
+    }
+    &--big{
+        font-size: 8rem;
+    }
+    &--font{
+        color: $color-accent;
+        font-family: 'Dancing Script', cursive;
+    }
+    &--link{
+        text-decoration: underline;
+        color: $color-accent;
+    }
+}
+.instruction__paragaph{
+    font-size: 1.8rem;
+    width: 40%;
+    text-align: justify;
+    margin: 1.5rem auto;
+    color: $color-white;
+    list-style: 1.2;
+}
+.name__label{
+    font-size: 2rem;
+    color: $color-white;
+}
+
+.secondary__heading{
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    color: $color-white;
+}

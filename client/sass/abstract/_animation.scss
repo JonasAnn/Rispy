@@ -1,0 +1,17 @@
+@keyframes leftRight{
+    0%{
+        transform: translateX(0) rotate(360deg);
+    }
+    50%{
+        opacity: 0.5;
+        transform: scale(.5);
+        transform: translateX(24.5rem);
+    }
+    55%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(44.5rem) rotate(360deg);
+    }
+}

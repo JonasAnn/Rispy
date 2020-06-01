@@ -1,0 +1,62 @@
+.welcome{
+    &__section{
+    width: 80%;
+    margin: auto;
+    padding: 3rem 0;
+    text-align: center;
+
+    }
+    &__animation{
+        width: 50%;
+        margin: auto;
+        border-radius: 5rem;
+        border: .2rem solid $color-accent;
+        margin: 8rem auto;
+    }
+}
+.animation{
+    border-radius: 50%;
+    height: 10rem;
+    width: 10rem;
+    padding: 3rem;
+    background-color: $color-light;
+    animation-name: leftRight;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    &__image{
+        @include imageRes;
+    }
+}
+
+//Instruction section design 
+
+.instruction{
+    &__section{
+        width: 80%;
+        margin: auto;
+        padding: 10rem 0;
+        text-align: center;
+    }
+
+}
+.name__input{
+    padding: 1.5rem 1rem;
+    width: 40%;
+    display: block;
+    margin: 3rem auto;
+    background-color: transparent;
+    border: .2rem dashed $color-accent;
+    border-radius: .5rem;
+    font-size: 1.7rem;
+    color: $color-accent;
+    &::placeholder{
+        font-family: 'Roboto Slab', serif;
+        font-size: 1.7rem;
+        color: $color-accent;
+    }
+    &:focus,
+    &:active{
+        outline: none;
+    }
+
+}
