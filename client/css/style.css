@@ -71,10 +71,19 @@ body {
   color: #fff; }
 
 .secondary__heading {
-  font-size: 2rem;
+  font-size: 2.7rem;
   font-weight: 600;
   text-align: center;
-  color: #fff; }
+  color: #fff;
+  text-decoration: underline;
+  text-decoration-color: #66FCF1; }
+
+.paragraph__user {
+  font-size: 2.5rem;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: underline; }
 
 .btn {
   border: 0.3rem solid #66FCF1;
@@ -110,6 +119,13 @@ body {
   text-decoration: none;
   color: inherit; }
 
+.btn--leader {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+  font-weight: 700;
+  border-radius: .5rem;
+  border: 0.2rem dashed #66FCF1; }
+
 .rules {
   height: 100vh;
   background-color: rgba(11, 12, 16, 0.9);
@@ -119,7 +135,8 @@ body {
   padding: 10rem 0;
   opacity: 0;
   visibility: hidden;
-  transition: all .3s; }
+  transition: all .3s;
+  z-index: 10000; }
   .rules__box {
     width: 35%;
     background-color: #fff;
@@ -129,7 +146,8 @@ body {
     overflow: hidden;
     opacity: 0;
     transform: scale(0.25);
-    transition: all .5s .2s; }
+    transition: all .5s .2s;
+    z-index: 10004; }
   .rules__image {
     width: 100%;
     object-fit: cover; }
@@ -180,8 +198,9 @@ body {
 
 .dashboard__game {
   width: 50%;
-  margin: 2rem auto;
-  position: relative; }
+  margin: 2rem auto 0;
+  position: relative;
+  height: 40rem; }
 
 .dashboard__icon {
   width: 100%;
@@ -190,22 +209,46 @@ body {
 .dashboard__scissors--box, .dashboard__rock--box, .dashboard__paper--box {
   position: absolute;
   border-radius: 50%;
-  height: 20rem;
-  width: 20rem;
-  background-color: #C5C6C7; }
+  padding: 4rem;
+  height: 18rem;
+  width: 18rem;
+  background-color: #fff;
+  transition: all .2s;
+  cursor: pointer; }
+  .dashboard__scissors--box:hover, .dashboard__rock--box:hover, .dashboard__paper--box:hover {
+    transform: translateY(-0.6rem); }
 
 .dashboard__scissors--box {
-  left: 1rem;
-  border: 3rem solid #87CEFA; }
+  left: 7rem;
+  top: 6rem;
+  border: 3rem solid #87CEFA;
+  box-shadow: 0 0.7rem #5287a8; }
+  .dashboard__scissors--box:active, .dashboard__scissors--box:focus {
+    transform: translateY(0);
+    box-shadow: 0 0.2rem #5287a8; }
 
 .dashboard__rock--box {
-  right: 1rem;
-  border: 3rem solid #FFD800; }
+  right: 7rem;
+  top: 6rem;
+  border: 3rem solid #FFD800;
+  box-shadow: 0 0.7rem #aa930e; }
+  .dashboard__rock--box:active, .dashboard__rock--box:focus {
+    transform: translateY(0);
+    box-shadow: 0 0.2rem #aa930e; }
 
 .dashboard__paper--box {
-  bottom: 1rem;
-  margin: auto;
-  border: 3rem solid #FE1A1A; }
+  bottom: -7rem;
+  border: 3rem solid #FE1A1A;
+  box-shadow: 0 0.7rem #aa1414;
+  left: 35%; }
+  .dashboard__paper--box:active, .dashboard__paper--box:focus {
+    transform: translateY(0);
+    box-shadow: 0 0.2rem #aa1414; }
+
+.dashboard__extra {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5rem; }
 
 .welcome__section {
   width: 80%;
@@ -255,3 +298,42 @@ body {
     color: #66FCF1; }
   .name__input:focus, .name__input:active {
     outline: none; }
+
+.playing {
+  position: relative; }
+  .playing__box {
+    display: flex;
+    flex: 1 1;
+    background-color: #74c0ff;
+    width: 50%;
+    margin: 2rem auto 0;
+    height: 40rem; }
+  .playing__user {
+    width: 50%; }
+  .playing__house {
+    align-items: flex-end;
+    width: 50%; }
+
+.score {
+  width: 11%;
+  height: auto;
+  padding: .5rem;
+  border-radius: 1rem;
+  background-color: transparent;
+  position: absolute;
+  border: 0.2rem dashed #66FCF1;
+  text-align: center; }
+  .score__user--paragraph {
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 700; }
+  .score__user--number, .score__house--number {
+    font-size: 9rem;
+    color: #66FCF1;
+    font-weight: 900; }
+  .score__user {
+    left: 2rem;
+    top: 5rem; }
+  .score__house {
+    right: 2rem;
+    top: 5rem; }

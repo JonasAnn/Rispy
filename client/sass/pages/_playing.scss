@@ -1,0 +1,48 @@
+.playing{
+    position: relative;
+    &__box{
+        display: flex;
+        flex: 1 1;
+        background-color: rgb(116, 192, 255);
+        width: 50%;
+        margin: 2rem auto 0;
+        height: 40rem;
+    }
+    &__user{
+        width: 50%;
+    }
+    &__house{
+        align-items: flex-end;
+        width: 50%;
+    }
+}
+
+.score{
+    width: 11%;
+    height: auto;
+    padding: .5rem;
+    border-radius: 1rem;
+    background-color: transparent;
+    position: absolute;
+    border: .2rem dashed $color-accent;
+    text-align: center;
+    &__user--paragraph{
+        font-size: 2rem;
+        color: $color-white;
+        font-weight: 700;
+    }
+    &__user--number,
+    &__house--number{
+        font-size: 9rem;
+        color: $color-accent;
+        font-weight: 900;
+    }
+    &__user{
+       left: 2rem;
+        top: 5rem;
+    }
+    &__house{
+        right: 2rem;
+        top: 5rem;
+    }
+}

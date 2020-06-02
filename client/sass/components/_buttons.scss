@@ -38,3 +38,10 @@
     text-decoration: none;
     color: inherit;
 }
+.btn--leader{
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    font-weight: 700;
+    border-radius: .5rem;
+    border: .2rem dashed $color-accent;
+}

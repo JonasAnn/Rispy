@@ -43,8 +43,10 @@
 .dashboard{
     &__game{
         width: 50%;
-        margin: 2rem auto;
+        margin: 2rem auto 0;
         position: relative;
+        height: 40rem;
+
     }
     &__icon{
         @include imageRes;
@@ -54,22 +56,53 @@
     &__paper--box{
         position: absolute;
         border-radius: 50%;
-        height: 20rem;
-        width: 20rem;
+        padding: 4rem;
+        height: 18rem;
+        width: 18rem;
         background-color: $color-white;
+        transition: all .2s;
+        cursor: pointer;
+        &:hover{
+            transform: translateY(-.6rem);
+        }
+        
         
     }
     &__scissors--box{
-        left: 1rem;
+        left: 7rem;
+        top: 6rem;
         border: 3rem solid #87CEFA;
+        box-shadow: 0 0.7rem  rgb(82, 135, 168);
+        &:active,
+        &:focus{
+            transform: translateY(0);
+            box-shadow: 0 0.2rem  rgb(82, 135, 168);
+        }
     }
     &__rock--box{
-        right: 1rem;
+        right: 7rem;
+        top: 6rem;
         border: 3rem solid #FFD800;
+        box-shadow: 0 0.7rem rgb(170, 147, 14);
+        &:active,
+        &:focus{
+            transform: translateY(0);
+            box-shadow: 0 0.2rem  rgb(170, 147, 14);
+        }
     }
     &__paper--box{
-        bottom: 1rem;
-        margin: auto;
+        bottom: -7rem;
         border: 3rem solid #FE1A1A;
+        box-shadow: 0 0.7rem rgb(170, 20, 20);
+        left: 35%;
+        &:active,
+        &:focus{
+            transform: translateY(0);
+            box-shadow: 0 0.2rem   rgb(170, 20, 20);
+        }
+    }
+    &__extra{
+        @include flexBetween;
+        padding: 0 5rem;
     }
 }
