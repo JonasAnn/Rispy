@@ -1,19 +1,31 @@
 .playing{
     position: relative;
+    padding: 2rem 0;
     &__box{
         display: flex;
         flex: 1 1;
-        background-color: rgb(116, 192, 255);
         width: 50%;
-        margin: 2rem auto 0;
-        height: 40rem;
+        margin: 5rem auto 0;
+        height: 35rem;
     }
     &__user{
         width: 50%;
+        position: relative;
     }
     &__house{
-        align-items: flex-end;
         width: 50%;
+        position: relative;
+        &::after{
+            content: '';
+            height: 14rem;
+            width: 14rem;
+            border-radius: 50%;
+            display: block;
+            margin: 8.7rem auto 0;
+            border: .2rem dashed rgba($color-accent, 0.6);
+            background-color: rgb(22, 29, 56);
+         
+        }
     }
     &__extra{
         text-align: right;
