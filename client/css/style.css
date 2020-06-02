@@ -313,6 +313,9 @@ body {
   .playing__house {
     align-items: flex-end;
     width: 50%; }
+  .playing__extra {
+    text-align: right;
+    padding: 0 5rem; }
 
 .score {
   width: 11%;
