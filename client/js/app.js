@@ -3,7 +3,8 @@ const continueBtn = document.querySelector('.btn--continue');
 const input = document.querySelector('.name__input');
 const cardBox = document.querySelector('.dashboard__game');
 const userChoice = document.querySelector('.user__choice');
-
+const houseChoice = document.querySelector('.house__choice');
+const choices = document.querySelectorAll('.dashboard__box');
 
 playBtn.addEventListener('click', instructionPage);
 continueBtn.addEventListener('click', playPage);
@@ -29,7 +30,7 @@ cardBox.addEventListener('click', chooseCard);
 
 function chooseCard(e){
    if(e.target.classList.contains('dashboard__box')){
-      console.log('wj');
+      
       document.querySelector('.dashboard').classList.add('hide')
       document.querySelector('.playing').classList.remove('hide');
 
@@ -39,10 +40,29 @@ function chooseCard(e){
       userChoice.firstElementChild.src = e.target.firstElementChild.src;
       userChoice.style.top = "10rem";
       userChoice.style.left = "20%";
+      //Loop through choices
+      function myFunction() {
+         setTimeout(houseChooing, 2000);
+       }
+
+     function houseChooing(){ 
+        let ran = Math.floor((Math.random() * 2) + 1);
+
+      for(let p = 0; p < choices.length; p++ ){
+         let ranChoice = choices[ran];
+         houseChoice.className = ranChoice.classList;
+         houseChoice.firstElementChild.src = ranChoice.firstElementChild.src;
+         houseChoice.style.top = "10rem";
+         houseChoice.style.left = "20%";
+
+       }
+      }
+
+      myFunction();
 
 
    } else if(e.target.classList.contains('dashboard__icon')){
-      console.log('wj');
+      
       document.querySelector('.dashboard').classList.add('hide')
       document.querySelector('.playing').classList.remove('hide');
 
@@ -56,5 +76,3 @@ function chooseCard(e){
 
    }
 }
-
-
