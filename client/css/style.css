@@ -350,3 +350,6 @@ body {
   .score__house {
     right: 2rem;
     top: 5rem; }
+
+.special {
+  visibility: hidden; }

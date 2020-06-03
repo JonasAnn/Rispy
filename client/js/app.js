@@ -10,12 +10,14 @@ playBtn.addEventListener('click', instructionPage);
 continueBtn.addEventListener('click', playPage);
 cardBox.addEventListener('click', chooseCard);
 
+// move to instruction page
  function instructionPage(e){
     document.querySelector('.welcome__section').classList.add('hide');
     document.querySelector('.instruction__section').classList.remove('hide');
     console.log('working');
  }
 
+ //check input and move to dashboard
  function playPage(e){
     if(input.value !== ""){
       document.querySelector('.dashboard').classList.remove('hide');
@@ -28,6 +30,7 @@ cardBox.addEventListener('click', chooseCard);
   }
  }
 
+ //what happens when a card is choosen
 function chooseCard(e){
    if(e.target.classList.contains('dashboard__box')){
       
@@ -42,7 +45,7 @@ function chooseCard(e){
       userChoice.style.left = "20%";
       //Loop through choices
       function myFunction() {
-         setTimeout(houseChooing, 2000);
+         setTimeout(houseChooing, 1000);
        }
 
      function houseChooing(){ 
@@ -52,6 +55,7 @@ function chooseCard(e){
          let ranChoice = choices[ran];
          houseChoice.className = ranChoice.classList;
          houseChoice.firstElementChild.src = ranChoice.firstElementChild.src;
+         houseChoice.firstElementChild.style.visibility = 'visible';
          houseChoice.style.top = "10rem";
          houseChoice.style.left = "20%";
 
@@ -73,6 +77,26 @@ function chooseCard(e){
       userChoice.style.top = "10rem";
       userChoice.style.left = "20%";
 
+       //Loop through choices
+       function myFunction() {
+         setTimeout(houseChooing, 1000);
+       }
+
+     function houseChooing(){ 
+        let ran = Math.floor((Math.random() * 2) + 1);
+
+      for(let p = 0; p < choices.length; p++ ){
+         let ranChoice = choices[ran];
+         houseChoice.className = ranChoice.classList;
+         houseChoice.firstElementChild.src = ranChoice.firstElementChild.src;
+         houseChoice.firstElementChild.style.visibility = 'visible';
+         houseChoice.style.top = "10rem";
+         houseChoice.style.left = "20%";
+
+       }
+      }
+
+      myFunction();
 
    }
 }
